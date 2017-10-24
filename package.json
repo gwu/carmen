@@ -1,0 +1,23 @@
+{
+  "name": "carmen",
+  "version": "1.0.0",
+  "main": "dist/bundle.js",
+  "author": "wugarrett@gmail.com",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --config webpack.dev.js"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "lodash": "^4.17.4",
+    "standard": "^10.0.3",
+    "standard-loader": "^6.0.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2",
+    "webpack-merge": "^4.1.0"
+  }
+}
