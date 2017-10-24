@@ -1,4 +1,11 @@
+import classes from './index.scss'
+
 function main () {
+  // Insert an image into the DOM.
+  const slide = window.document.createElement('div')
+  slide.classList.add(classes.slide)
+  slide.style.backgroundImage = `url('https://lh3.googleusercontent.com/FtyzQxDAhVUt3mVuBjYmA3_r6APrzINcFtmrGJeHb335q5UiqYMQ-Mmumcby3zn7fgdlZT19OI05eFK85ucFpwDAaL5NzBM1753hwTR7E97GNXeO8ndR3cwxvFCpGYUcf6sBH4mGkFKDFrsYC-7uUJflBX3VxUznyUnC46ftvCl2AsrZNiNdM14Ie80WnrNYSdHJ09LrGji1EbL2Gf_Oi1dnMYTjLQsyPi9qj3YIUr7hJa-u7hTkEHhk8QhkdhPHSHoS9R-dkAJZ9hkJ1DAF1j_Kugjt6nPYl6atncxmUbZBALUJlFHLUkBSAbERv-3BcXXCur6gAANP7AQnIWUNh0UJGZf4Zv0GaCC44JdIVWKEDAFqyVWDcDW0cWpvY5d3e4jQVUPcH2L5Fn0zzruA1BNbEakAuuff3gVX_2lX2k93bLzTFopgzJEvJjIEDH5v5ZQnyr2rv41Kmcnsj7YEEKeinWm8ZQrRF4rzAlyvJTi38qFJYx-7ODsPIzFTHjub8td5IxB55G6COq89dgtjnkBdQSHb3f5qCdsq6ISrxVTz_OJeo5oMDZvRt1qfFq4pNpZONLzb_X5EU-KXTaWKRP7BirsXg0nRjXKmzoM_6xI=w907-h681-no')`
+  window.document.body.appendChild(slide)
 }
 
 main()

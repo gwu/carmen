@@ -19,6 +19,10 @@ module.exports = {
       {
         test: /\.(png|json)$/,
         use: ['file-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
