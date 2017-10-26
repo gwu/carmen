@@ -34,7 +34,7 @@ class CarmenApp extends React.Component {
       window.requestAnimationFrame(() => {
         this.setState({
           timestamp: moment(this.props.startTs)
-            .add(parseInt(window.scrollY / this.props.pixelsPerHour), 'hours')
+            .add(window.scrollY / this.props.pixelsPerHour, 'hours')
             .valueOf()
         })
         this.requestedAnimationFrame = false
@@ -54,13 +54,13 @@ class CarmenApp extends React.Component {
         }}
       >
         <div className={classes.main}>
+          <Posts
+            timestamp={this.state.timestamp}
+          />
           <Timeline
             timestamp={this.state.timestamp}
             startTs={this.props.startTs}
             endTs={this.props.endTs}
-          />
-          <Posts
-            timestamp={this.state.timestamp}
           />
         </div>
       </div>

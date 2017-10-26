@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import moment from 'moment'
 import React from 'react'
+import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 import PostService from 'services/post-service'
@@ -36,7 +37,7 @@ class Posts extends React.Component {
 
   render () {
     const timeDifference = (post) => {
-      return moment(post.date).diff(moment(this.props.timestamp), 'hours')
+      return moment(post.date).diff(moment(this.props.timestamp), 'minutes') / 60
     }
 
     const isInFocus = (post) => {
@@ -50,7 +51,7 @@ class Posts extends React.Component {
     }
 
     return (
-      <div className={classes.postContainer}>
+      <div className={classes.screen}>
         {
           _(this.state.posts)
             .filter((post) => isInFocus(post) || isInTransition(post))
@@ -58,26 +59,49 @@ class Posts extends React.Component {
               (post) => (
                 <div
                   key={post.id}
-                  className={classes.postWrapper}
+                  className={
+                    classnames({
+                      [classes.background]: true,
+                      [classes.inTransition]: isInTransition(post)
+                    })
+                  }
                   style={{
-                    transform: `translateY(
-                      ${Math.sign(timeDifference(post)) * Math.pow(timeDifference(post), 2)}%
-                    )`,
-                    opacity: Math.abs(timeDifference(post)) > 12
-                      ? 1 - ((Math.abs(timeDifference(post)) - 12) / 24)
-                      : 1
+                    backgroundImage: `url('${post.background}')`
                   }}
-                >
-                  <Post
-                    data={post}
-                    isInTransition={isInTransition(post)}
-                    transitionDirection={this.state.transitionDirection}
-                  />
-                </div>
+                />
               )
             )
             .value()
         }
+        <div className={classes.postContainer}>
+          {
+            _(this.state.posts)
+              .filter((post) => isInFocus(post) || isInTransition(post))
+              .map(
+                (post) => (
+                  <div
+                    key={post.id}
+                    className={classes.postWrapper}
+                    style={{
+                      transform: `translateY(
+                        ${Math.sign(timeDifference(post)) * Math.pow(timeDifference(post), 2)}%
+                      )`,
+                      opacity: Math.abs(timeDifference(post)) > 6
+                        ? 1 - ((Math.abs(timeDifference(post)) - 6) / 24)
+                        : 1
+                    }}
+                  >
+                    <Post
+                      data={post}
+                      isInTransition={isInTransition(post)}
+                      transitionDirection={this.state.transitionDirection}
+                    />
+                  </div>
+                )
+              )
+              .value()
+          }
+        </div>
       </div>
     )
   }
@@ -90,7 +114,7 @@ Posts.propTypes = {
 }
 
 Posts.defaultProps = {
-  focusRadiusHours: 24,
+  focusRadiusHours: 18,
   transitionWidthHours: 12
 }
 

@@ -1,8 +1,8 @@
 :local(.timeline) {
   position: fixed;
   height: 100%;
-  width: 100px;
-  background: linear-gradient(90deg, #000, rgba(0, 0, 0, 0));
+  width: 50px;
+  background: linear-gradient(90deg, rgba(80, 80, 80, 1), rgba(80, 80, 80, 0));
   color: #fff;
   font-family: Roboto, sans-serif;
 }
