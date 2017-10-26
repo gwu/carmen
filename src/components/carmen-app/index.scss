@@ -8,3 +8,11 @@
   background-size: cover;
   background-position: center;
 }
+
+:local(.ticks) {
+  position: absolute;
+  z-index: 0;
+  color: #add820;
+  left: 27px;
+  font-weight: bold;
+}

@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import moment from 'moment'
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -57,12 +58,22 @@ class CarmenApp extends React.Component {
           <Posts
             timestamp={this.state.timestamp}
           />
-          <Timeline
-            timestamp={this.state.timestamp}
-            startTs={this.props.startTs}
-            endTs={this.props.endTs}
-          />
         </div>
+        <div className={classes.ticks}>
+          {
+            _.range(totalHours / 12)
+              .map((i) => (
+                <div key={i} style={{ height: `${this.props.pixelsPerHour * 12}px` }}>
+                  —
+                </div>
+              ))
+          }
+        </div>
+        <Timeline
+          timestamp={this.state.timestamp}
+          startTs={this.props.startTs}
+          endTs={this.props.endTs}
+        />
       </div>
     )
   }

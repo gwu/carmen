@@ -67,11 +67,13 @@ class Posts extends React.Component {
                       [classes.inTransition]: isInTransition(post)
                     })
                   }
-                  style={{
-                    backgroundImage: `url('${post.background}')`,
-                    filter: `blur(5px)`
-                  }}
                 >
+                  <div
+                    className={classes.image}
+                    style={{
+                      backgroundImage: `url('${post.background}')`
+                    }}
+                  />
                   <div
                     className={classes.tint}
                     style={{
