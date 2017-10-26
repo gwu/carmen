@@ -3,8 +3,8 @@ import moment from 'moment'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Posts from 'components/Posts'
-import Timeline from 'components/Timeline'
+import Posts from 'components/posts'
+import Timeline from 'components/timeline'
 
 import classes from './index.scss'
 
