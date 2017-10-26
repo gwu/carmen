@@ -1,0 +1,36 @@
+:local(.clockFace) {
+  position: relative;
+  width: 31px;
+  height: 31px;
+  border-radius: 16px;
+  background-color: #eee;
+}
+
+:local(.hourHand) {
+  position: absolute;
+  left: 14px;
+  top: 5px;
+  transform-origin: center bottom;
+  width: 3px;
+  height: 10px;
+  background-color: orange;
+  border-radius: 2px;
+}
+
+:local(.minuteHand) {
+  position: absolute;
+  width: 1px;
+  height: 13px;
+  background-color: orange;
+  top: 2px;
+  left: 15px;
+}
+
+:local(.ampm) {
+  position: absolute;
+  color: #666;
+  font-size: 6px;
+  left: 20px;
+  top: 11px;
+  text-transform: uppercase;
+}

@@ -14,7 +14,28 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: ['standard-loader']
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                'react',
+                [
+                  'env',
+                  {
+                    targets: {
+                      browsers: ['last 2 versions']
+                    }
+                  }
+                ]
+              ],
+              cacheDirectory: true,
+              plugins: ['react-hot-loader/babel']
+            }
+          },
+          'standard-loader'
+        ]
       },
       {
         test: /\.(png|json)$/,
@@ -24,6 +45,12 @@ module.exports = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       }
+    ]
+  },
+  resolve: {
+    modules: [
+      path.resolve(__dirname, "src"),
+      'node_modules'
     ]
   },
   plugins: [

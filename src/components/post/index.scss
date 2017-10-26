@@ -1,0 +1,25 @@
+:local(.post) {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+  transition: opacity 1.0s;
+  font-family: 'Roboto', serif;
+
+  &:local(.inTransition) {
+    opacity: 0;
+  }
+}
+
+:local(.title) {
+  min-width: 300px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-family: 'Slabo 27px', serif;
+  font-size: 40px;
+  padding: 4px 12px;
+}
+
+:local(.text) {
+  padding: 12px;
+}

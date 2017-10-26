@@ -1,0 +1,28 @@
+:local(.timeline) {
+  position: fixed;
+  height: 100%;
+  width: 100px;
+  background: linear-gradient(90deg, #000, rgba(0, 0, 0, 0));
+  color: #fff;
+  font-family: Roboto, sans-serif;
+}
+
+:local(.cursor) {
+  position: absolute;
+  transition: top 0.2s;
+}
+
+:local(.date) {
+  white-space: nowrap;
+  font-size: 10px;
+  text-transform: uppercase;
+  transform: rotate(-90deg) translateX(-65px);
+  transform-origin: top left;
+  position: absolute;
+  font-family: monospace;
+}
+
+:local(.clock) {
+  position: absolute;
+  left: 20px;
+}
