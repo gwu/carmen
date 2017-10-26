@@ -19,7 +19,12 @@ class Post extends React.Component {
   render () {
     return (
       <div className={classes.post}>
-        <div className={classes.title}>{this.props.data.title}</div>
+        <div
+          className={classes.title}
+          style={{ backgroundColor: this.props.data.color }}
+        >
+          {this.props.data.title}
+        </div>
         {
           this.props.data.type === 'text' && this.renderText()
         }
