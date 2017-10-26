@@ -20,6 +20,12 @@
   }
 }
 
+:local(.tint) {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
 :local(.postContainer) {
   position: fixed;
   top: 50%;

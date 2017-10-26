@@ -5,7 +5,9 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 import PostService from 'services/post-service'
+import InlineVideo from 'components/inline-video'
 import Post from 'components/post'
+import LocationWidget from 'components/location-widget'
 
 import classes from './index.scss'
 
@@ -66,12 +68,27 @@ class Posts extends React.Component {
                     })
                   }
                   style={{
-                    backgroundImage: `url('${post.background}')`
+                    backgroundImage: `url('${post.background}')`,
+                    filter: `blur(5px)`
                   }}
-                />
+                >
+                  <div
+                    className={classes.tint}
+                    style={{
+                      backgroundColor: post.color
+                    }}
+                  />
+                </div>
               )
             )
             .value()
+        }
+        {
+          this.state.posts.length > 0 && !_(this.state.posts).some(isInFocus) && (
+            <InlineVideo
+              url='https://www.dropbox.com/s/jlyary6qxbp3w7p/VID_20171026_133425.mp4?dl=1'
+            />
+          )
         }
         <div className={classes.postContainer}>
           {
@@ -85,10 +102,10 @@ class Posts extends React.Component {
                     style={{
                       transform: `translateY(
                         ${Math.sign(timeDifference(post)) * Math.pow(timeDifference(post), 2)}%
-                      )`,
-                      opacity: Math.abs(timeDifference(post)) > 6
-                        ? 1 - ((Math.abs(timeDifference(post)) - 6) / 24)
-                        : 1
+                      )`
+                      // opacity: Math.abs(timeDifference(post)) > 6
+                      //   ? 1 - ((Math.abs(timeDifference(post)) - 6) / 24)
+                      //   : 1
                     }}
                   >
                     <Post
@@ -102,6 +119,9 @@ class Posts extends React.Component {
               .value()
           }
         </div>
+        <LocationWidget
+          location='8 Spruce St, NYC'
+        />
       </div>
     )
   }
