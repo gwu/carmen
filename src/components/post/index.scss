@@ -2,12 +2,9 @@
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
   background-color: rgba(255, 255, 255, 0.7);
-  opacity: 1;
-  transition: opacity 1.0s;
   font-family: 'Roboto', serif;
 
   &:local(.inTransition) {
-    opacity: 0;
   }
 }
 

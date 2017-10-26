@@ -35,17 +35,18 @@ class Posts extends React.Component {
   }
 
   render () {
+    const timeDifference = (post) => {
+      return moment(post.date).diff(moment(this.props.timestamp), 'hours')
+    }
+
     const isInFocus = (post) => {
-      const timeDifference =
-        Math.abs(moment(post.date).diff(moment(this.props.timestamp), 'hours'))
-      return timeDifference <= this.props.focusRadiusHours
+      return Math.abs(timeDifference(post)) <= this.props.focusRadiusHours
     }
 
     const isInTransition = (post) => {
-      const timeDifference =
-        Math.abs(moment(post.date).diff(moment(this.props.timestamp), 'hours'))
-      return (timeDifference > this.props.focusRadiusHours) &&
-        (timeDifference <= this.props.focusRadiusHours + this.props.transitionWidthHours)
+      const timeDiff = Math.abs(timeDifference(post))
+      return (timeDiff > this.props.focusRadiusHours) &&
+        (timeDiff <= this.props.focusRadiusHours + this.props.transitionWidthHours)
     }
 
     return (
@@ -55,12 +56,24 @@ class Posts extends React.Component {
             .filter((post) => isInFocus(post) || isInTransition(post))
             .map(
               (post) => (
-                <Post
+                <div
                   key={post.id}
-                  data={post}
-                  isInTransition={isInTransition(post)}
-                  transitionDirection={this.state.transitionDirection}
-                />
+                  className={classes.postWrapper}
+                  style={{
+                    transform: `translateY(
+                      ${Math.sign(timeDifference(post)) * Math.pow(timeDifference(post), 2)}%
+                    )`,
+                    opacity: Math.abs(timeDifference(post)) > 12
+                      ? 1 - ((Math.abs(timeDifference(post)) - 12) / 24)
+                      : 1
+                  }}
+                >
+                  <Post
+                    data={post}
+                    isInTransition={isInTransition(post)}
+                    transitionDirection={this.state.transitionDirection}
+                  />
+                </div>
               )
             )
             .value()

@@ -13,9 +13,11 @@ function loadPosts () {
         `
       },
       {
-        id: 'second-post',
-        date: '2017-02-20',
-        body: 'Then we went there.'
+        id: 'moving-out-mess',
+        date: '2017-10-26',
+        title: 'Moving out',
+        type: 'text',
+        body: `Progress is slow, but we're on track`
       }
     ])
   })

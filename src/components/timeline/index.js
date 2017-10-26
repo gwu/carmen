@@ -15,7 +15,7 @@ class Timeline extends React.Component {
       <div className={classes.timeline}>
         <div
           className={classes.cursor}
-          style={{ top: `${Math.round(progress * 100)}%` }}
+          style={{ top: `${(10 + progress * 80).toFixed(2)}%` }}
         >
           <div className={classes.date}>
             {moment(this.props.timestamp).format('ddd MMM DD, YYYY')}
