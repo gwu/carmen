@@ -10,7 +10,7 @@ class LocationWidget extends React.Component {
     const host = 'maps.googleapis.com'
     const path = '/maps/api/staticmap'
     const size = '200x200'
-    const params = `center=${window.encodeURIComponent(this.props.location)}&zoom=13&size=${size}&maptype=roadmap`
+    const params = `center=${window.encodeURIComponent(this.props.location)}&zoom=10&size=${size}&maptype=roadmap`
     const url = `https://${host}${path}?${params}&key=${googleMapsApiKey}`
 
     return (

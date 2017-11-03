@@ -51,6 +51,10 @@ class Posts extends React.Component {
         (timeDiff <= this.props.focusRadiusHours + this.props.transitionWidthHours)
     }
 
+    const activePosts = _(this.state.posts)
+      .filter((post) => isInFocus(post) || isInTransition(post))
+      .value()
+
     return (
       <div className={classes.screen}>
         {
@@ -93,8 +97,7 @@ class Posts extends React.Component {
         }
         <div className={classes.postContainer}>
           {
-            _(this.state.posts)
-              .filter((post) => isInFocus(post) || isInTransition(post))
+            activePosts
               .map(
                 (post) => (
                   <div
@@ -117,12 +120,21 @@ class Posts extends React.Component {
                   </div>
                 )
               )
-              .value()
           }
         </div>
-        <LocationWidget
-          location='8 Spruce St, NYC'
-        />
+        {
+          activePosts
+            .filter((post) => !isInTransition(post))
+            .filter((post) => post.location)
+            .map(
+              (post) => (
+                <LocationWidget
+                  key={post.id}
+                  location={post.location}
+                />
+              )
+            )
+        }
       </div>
     )
   }
