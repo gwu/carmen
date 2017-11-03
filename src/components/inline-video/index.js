@@ -6,7 +6,7 @@ import classes from './index.scss'
 class InlineVideo extends React.Component {
   render () {
     return (
-      <video className={classes.video} loop muted autoPlay>
+      <video className={classes.video} loop autoPlay>
         <source src={this.props.url} />
       </video>
     )

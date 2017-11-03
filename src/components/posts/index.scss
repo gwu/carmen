@@ -48,3 +48,13 @@
     height: 60px;
   }
 }
+
+:local(.noPostDate) {
+  position: absolute;
+  color: #ddd;
+  font-size: 36px;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}

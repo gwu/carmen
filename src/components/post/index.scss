@@ -18,3 +18,8 @@
   padding: 12px;
   line-height: 1.5;
 }
+
+:local(.image) img {
+  width: 100%;
+  display: block;
+}

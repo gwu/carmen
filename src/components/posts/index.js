@@ -5,7 +5,6 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 import PostService from 'services/post-service'
-import InlineVideo from 'components/inline-video'
 import Post from 'components/post'
 import LocationWidget from 'components/location-widget'
 
@@ -87,9 +86,9 @@ class Posts extends React.Component {
         }
         {
           this.state.posts.length > 0 && !_(this.state.posts).some(isInFocus) && (
-            <InlineVideo
-              url='https://www.dropbox.com/s/jlyary6qxbp3w7p/VID_20171026_133425.mp4?dl=1'
-            />
+            <div className={classes.noPostDate}>
+              {moment(this.props.timestamp).format('ddd MMM DD, YYYY')}
+            </div>
           )
         }
         <div className={classes.postContainer}>
