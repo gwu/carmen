@@ -38,7 +38,7 @@ class Posts extends React.Component {
 
   render () {
     const timeDifference = (post) => {
-      return moment(post.date).diff(moment(this.props.timestamp), 'minutes') / 60
+      return moment(post.date, 'YYYY-MM-DD k:mm').diff(moment(this.props.timestamp), 'minutes') / 60
     }
 
     const isInFocus = (post) => {

@@ -86,8 +86,8 @@ CarmenApp.propTypes = {
 }
 
 CarmenApp.defaultProps = {
-  startTs: moment('2017-10-25').valueOf(),
-  endTs: moment('2018-10-25').valueOf(),
+  startTs: moment('2017-10-25', 'YYYY-MM-DD').valueOf(),
+  endTs: moment('2018-10-25', 'YYYY-MM-DD').valueOf(),
   pixelsPerHour: 15
 }
 
