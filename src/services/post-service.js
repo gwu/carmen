@@ -84,6 +84,26 @@ function loadPosts () {
         background: 'https://lh3.googleusercontent.com/gzbpNx3OFYbRZfxGBs5KFTXqFXlOpUbmduFvzvDDS-86iVOUnOhJOakVMYgTWRJsIBNtQdyBj4qzEKEtlJUOqEvtEut9yQYnp2FFNDRvMCA6IM5J-sFW3KKtgEuVMcSGOrKp1ynapyth-IkHca2ajRF5nXZN_ZYlq4R_UpU05_iKaQJW6VamGIC7cmTbPrAriOlM_SWBh0AhVHwRMWd1beKl-Xk4Q2gokz275QYgcWdQXeNRVH89-9FdfT6AHlZ2aCb9aW-nCK2ZZPp4RgPTbOXC1HcERRTW4UkM0ED6KyE17Cty1cxSb6b_TRvwC7BrHRx1TfCfy0LlaDvYQtFzIG2ONqXUTGvfkDB-Qm-3UX0B32nj_hHn-Ge-pJeXgYHA4M-5931Vepuhd2JBi5w18gQzaf0pODjp07tacJssncSCfRaE_ZufO9-SATB-J4JRQFcIVK3JcYSSUv8grmVJoG4YA0z60G9DseZrwVHUa9jWocLMhSpedXaValQNFUMznF0ogw2DMbbd9-Fpwp8ir_5hyRMAVElz4FBMndnvyRWJzKbNaTwF_QedWLB1hf1gcZa-JIUnhs8p1hYjN-B73ADsRDX4VgtN0jcrgPX6_UlrqNM6n7BpIG7Mnjxpg8YzSuscogYmqVRxaYomUIHIZiXBoK4RZAuCzSBq=w935-h701-no',
         color: '#1ec99e',
         location: 'The Grind Cafe, Glenview, IL'
+      },
+      {
+        id: 'd-and-b-with-kiwon',
+        date: '2017-11-04 22:00',
+        title: 'Suburban night out',
+        type: 'video',
+        body: 'https://www.dropbox.com/s/1vun5ot31lfom6t/VID_20171103_223127.mp4?dl=1',
+        background: 'https://lh3.googleusercontent.com/p3Gdl8HHOanUCrgMGs2HPA3dgWcyvEK6PaiQzDtlOJEK_ML99NEuJQYGtMxDYiZDMkLQZfBaxlpxH25XYjLjtGFZ5uK5bHgcgrKneE36wxZWtCb1kT7yx1fgztg3hneeJgdJfMmXC3cXRDQD2StLg_WgK9e4fM5aRX5kcseVAyyGnWvc9DKTCDbpZRjzvExVvGuFqc5CwSGRnNfJ2Uu8eWWn0UKCLyO9NoUIWD2c0vamnAAB4lB1sZk39tCFrEogs3zgiR1d3Q5VovYsFQmvdHIQrcuvEbfhiD1DgavVSy2wf6EY_RQd5pA5nKRdzaQsIKTEDr2ftFR8g7GaMi6z9aKGkXqq62OcGUWhCt0TXEl8M4TXk4zIz1HYD7ONK-PTjKuBGXzkkzE5AC-dPeuRRJ71GEoPgdshE5d7psP-vRDkVA0UyE96TA7NFOZNtZ4PFNx_EDGyNXs-sGeF1a3T_9kHjtm1SqHAt-ivQo9qKz1aCgujyNYbUtpWjuXdKs7mOHWAqD_eyvffTK9XrjhMd7i8yxcpTZieSaQqzQK_noHS7RyDJeMIX0-WiwX5et4baw39XIMNKJ-tr5qiJ3K2la89zGcTdLhiS358Mhild9c=w935-h701-no',
+        color: '#f442a4',
+        location: 'Dave and Busters, Vernon Hill, IL'
+      },
+      {
+        id: 'bob-chins',
+        date: '2017-11-05 12:00',
+        title: 'Bob Chinn\'s Crab House',
+        type: 'image',
+        body: 'https://lh3.googleusercontent.com/VJkSTLEnomo0k5lkCDWrVy89-t2hHBitdJf5S8UOpVs9YAkYAjEHzdUoQO-Ivh-yVeI-jsJAZWBud31s6aSCBgp15JJVSqu0dqiTf675VmCQppUZ-jikWEt-qS2q3Q61vj3pp0YiwcvEsYi8T89CFxZXipT9s_kZvXBYtMh7qfUExS1X-xIERlURXl4NwISliGRufHi3tn_lJioE7Oo8hz91fl2EATlJ5e_l_s105cgXbzljl0R7PAskcBIgRLj7PRB-1WF49r90YaCoARjleLxikgKlhdswIq2i2dQ6b9Zo8rnujC7BZUOCy6jhmGWpCAKYlE4bVnYPhfjWCLYT_rekELH_xvbCyBb8xDzdS57agFhqq1W-ng0st6lhC_1O-I5bM1WKIweJzIE-3ndIFlAhcdoV-r6ahXln0sP2_4ImlLJFZRLzcV46OC7nO6QjWPL4no4ok64E8Cab7vNBWtdoeg5Y6JBU3tZ60nfNa4XqBvp00zjVTex0HtFCLhjwQdo081DuiF0owsITVkrDQaIhxn-QCxbSu3fqX9_pcjGu4-GBtOHn6wI8FEwh3tw7MNQPS0ZrTmK5ghgkvmhM8RhYiNaSmKzRYXBMo1URTdU=w935-h701-no',
+        background: 'https://lh3.googleusercontent.com/VJkSTLEnomo0k5lkCDWrVy89-t2hHBitdJf5S8UOpVs9YAkYAjEHzdUoQO-Ivh-yVeI-jsJAZWBud31s6aSCBgp15JJVSqu0dqiTf675VmCQppUZ-jikWEt-qS2q3Q61vj3pp0YiwcvEsYi8T89CFxZXipT9s_kZvXBYtMh7qfUExS1X-xIERlURXl4NwISliGRufHi3tn_lJioE7Oo8hz91fl2EATlJ5e_l_s105cgXbzljl0R7PAskcBIgRLj7PRB-1WF49r90YaCoARjleLxikgKlhdswIq2i2dQ6b9Zo8rnujC7BZUOCy6jhmGWpCAKYlE4bVnYPhfjWCLYT_rekELH_xvbCyBb8xDzdS57agFhqq1W-ng0st6lhC_1O-I5bM1WKIweJzIE-3ndIFlAhcdoV-r6ahXln0sP2_4ImlLJFZRLzcV46OC7nO6QjWPL4no4ok64E8Cab7vNBWtdoeg5Y6JBU3tZ60nfNa4XqBvp00zjVTex0HtFCLhjwQdo081DuiF0owsITVkrDQaIhxn-QCxbSu3fqX9_pcjGu4-GBtOHn6wI8FEwh3tw7MNQPS0ZrTmK5ghgkvmhM8RhYiNaSmKzRYXBMo1URTdU=w935-h701-no',
+        color: '#ff9d00',
+        location: 'Bob Chinns Crab House, Wheeling, IL'
       }
     ])
   })
